@@ -1,6 +1,6 @@
 # Mozilla Thunderbird
 
-## Manuelle Einstellungen
+## Settings
 
 * menu (alt+v) > layout > vertical view
 * account settings > copies & folders > when sending messages, automatically place a copy in > other > inbox
