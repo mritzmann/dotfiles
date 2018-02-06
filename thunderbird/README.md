@@ -5,6 +5,7 @@ Manuelle Einstellungen
 * menu (alt+v) > layout > vertical view
 * account settings > copies & folders > when sending messages, automatically place a copy in > other > inbox
 * preferences > display > advanced > automatically mark messages as read (checkbox deselect)
+* preferences > composition > spelling > language: german (switzerland)
 
 Add-Ons:
 
