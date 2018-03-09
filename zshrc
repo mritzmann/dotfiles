@@ -19,3 +19,4 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # aliases
+alias task="ssh -tt root@console01.cloud42.ch task"
