@@ -1,5 +1,5 @@
 # path
-export ZSH=/home/markus/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # theme
 ZSH_THEME="agnoster"
