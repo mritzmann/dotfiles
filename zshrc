@@ -15,6 +15,10 @@ source $ZSH/oh-my-zsh.sh
 # language
 # export LANG=en_US.UTF-8
 
+# zsh-syntax-highlighting
+# https://github.com/zsh-users/zsh-syntax-highlighting
+[[ -f ~/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
