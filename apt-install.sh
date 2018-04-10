@@ -8,3 +8,4 @@ sudo apt-get install wget
 sudo apt-get install traceroute
 sudo apt-get install dnsutils
 sudo apt-get install pwgen
+sudo apt-get install tree
