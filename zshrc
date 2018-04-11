@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # theme
-ZSH_THEME="agnoster"
+ZSH_THEME="ys"
 
 # plugins
 plugins=(
