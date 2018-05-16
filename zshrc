@@ -24,3 +24,5 @@ source $ZSH/oh-my-zsh.sh
 
 # aliases
 alias task="ssh -tt root@console01.cloud42.ch task"
+alias timew="ssh -tt timewarrior@mari01.snowflakehosting.ch timew"
+
