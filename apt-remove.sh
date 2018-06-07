@@ -11,3 +11,5 @@ sudo apt-get remove gnome-mahjongg # game
 sudo apt-get remove gnome-sudoku # game
 sudo apt-get remove 'deja-dup*' # backup software
 sudo apt-get remove cheese # photo / webcam software
+sudo apt-get remove gnome-getting-started-docs
+sudo apt-get remove brasero # cd burning software
