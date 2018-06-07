@@ -25,4 +25,6 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 alias task="ssh -tt root@console01.cloud42.ch task"
 alias timew="ssh -tt timewarrior@mari01.snowflakehosting.ch timew"
-
+alias myip="myipv4 && myipv6"
+alias myipv4="dig +short -4 myip.opendns.com a @resolver1.opendns.com"
+alias myipv6="dig +short -6 myip.opendns.com aaaa @resolver1.opendns.com"
