@@ -1,4 +1,4 @@
-# path
+# oh-my-zsh
 export ZSH=$HOME/.oh-my-zsh
 
 # theme
@@ -6,7 +6,7 @@ ZSH_THEME="ys"
 
 # plugins
 plugins=(
-  git
+	git
 )
 
 # oh-my-zsh
@@ -28,3 +28,14 @@ alias timew="ssh -tt timewarrior@mari01.snowflakehosting.ch timew"
 alias myip="myipv4 && myipv6"
 alias myipv4="dig +short -4 myip.opendns.com a @resolver1.opendns.com"
 alias myipv6="dig +short -6 myip.opendns.com aaaa @resolver1.opendns.com"
+
+# ping
+ping() {
+	if [ $# -eq 0 ]
+	then
+		=ping google.ch
+	else
+		=ping "$@"
+	fi
+}
+
