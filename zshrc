@@ -42,3 +42,9 @@ ping() {
 	fi
 }
 
+# find
+f() {
+	q="*$1*"
+	find -iname $q
+}
+
