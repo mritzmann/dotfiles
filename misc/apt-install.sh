@@ -12,3 +12,4 @@ sudo apt-get install ncdu
 sudo apt-get install zsh
 sudo apt-get install nmap
 sudo apt-get install vim
+sudo apt-get install tig
