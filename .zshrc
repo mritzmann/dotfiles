@@ -27,7 +27,6 @@ setopt no_BEEP
 
 # aliases
 alias task="ssh -tt root@console01.cloud42.ch task"
-alias timew="ssh -tt timewarrior@mari01.snowflakehosting.ch timew"
 alias myip="myipv4 && myipv6"
 alias myipv4='TEMPIP=$(dig +short -4 myip.opendns.com a @resolver1.opendns.com 2> /dev/null) && echo $TEMPIP || echo "ipv4: down"'
 alias myipv6='TEMPIP=$(dig +short -6 myip.opendns.com aaaa @resolver1.opendns.com 2> /dev/null) && echo $TEMPIP || echo "ipv6: down"'
