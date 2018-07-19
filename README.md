@@ -1,12 +1,13 @@
 # dotfiles
 
-```sh
-# overwrite zshrc-file
-./setup.sh
+My dotfiles. Install with `./setup.sh`.
 
-# uninstall unwanted packages
-./apt-remove.sh
+## Scripts
 
-# install useful packages
-./apt-install.sh
+```shell
+scripts
+├── apt-install.sh # installs useful debian packages
+├── apt-install.termux.sh # same for termux
+├── apt-remove.sh # remove unwanted debian packages
+└── xrandr-office.sh # screen settings
 ```
