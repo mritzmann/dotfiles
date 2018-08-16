@@ -34,9 +34,6 @@ digx() { q=$(dig +short a "$1") ; dig +short -x $q }
 # find
 f() { q="*$1*" ; find -iname $q }
 
-# diff
-alias diff='diff --color'
-
 # ping
 ping() {
 	if [ $# -eq 0 ]
