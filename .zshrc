@@ -28,6 +28,9 @@ alias myip="myip4 && myip6"
 alias myip4='TEMPIP=$(dig +short -4 myip.opendns.com a @resolver1.opendns.com 2> /dev/null) && echo $TEMPIP || echo "ipv4: down"'
 alias myip6='TEMPIP=$(dig +short -6 myip.opendns.com aaaa @resolver1.opendns.com 2> /dev/null) && echo $TEMPIP || echo "ipv6: down"'
 
+# bat
+type bat > /dev/null && alias cat=bat || echo "[INFO] https://github.com/sharkdp/bat is not installed"
+
 # digx
 digx() { q=$(dig +short a "$1") ; dig +short -x $q }
 
