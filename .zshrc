@@ -14,8 +14,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # zsh-syntax-highlighting
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/git/zsh-syntax-highlighting
-[[ -f ~/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f ~/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || echo "[INFO] zsh-syntax-highlighting is not installed"
 
 # local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
