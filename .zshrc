@@ -38,7 +38,7 @@ f() { q="*$1*" ; find -iname $q }
 ping() {
 	if [ $# -eq 0 ]
 	then
-		=ping google.ch
+		=ping 8.8.8.8
 	else
 		=ping "$@"
 	fi
