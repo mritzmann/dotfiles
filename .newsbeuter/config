@@ -6,3 +6,7 @@ ttrss-login     "markus"
 # star/publish entry
 ttrss-flag-star    "s"
 ttrss-flag-publish "p"
+
+# refresh
+auto-reload "yes"
+reload-time "30"
