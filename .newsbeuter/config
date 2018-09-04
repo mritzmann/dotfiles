@@ -1,0 +1,8 @@
+# Tiny Tiny RSS access information
+urls-source     "ttrss"
+ttrss-url       "https://ttrss01.cloud42.ch/"
+ttrss-login     "markus"
+
+# star/publish entry
+ttrss-flag-star    "s"
+ttrss-flag-publish "p"

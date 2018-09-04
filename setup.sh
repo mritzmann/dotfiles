@@ -16,3 +16,7 @@ ln -s ~/git/dotfiles/.config/Code/User/settings.json ~/.config/Code/User/setting
 # redshift
 rm ~/.config/redshift.conf
 ln -s ~/git/dotfiles/.config/redshift.conf ~/.config/redshift.conf
+
+# newsbeuter
+rm ~/.newsbeuter/config
+ln -s  ~/git/dotfiles/.newsbeuter/config ~/.newsbeuter/config
