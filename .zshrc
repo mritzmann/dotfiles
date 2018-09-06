@@ -36,6 +36,9 @@ digx() { q=$(dig +short a "$1") ; dig +short -x $q }
 # find
 f() { q="*$1*" ; find -iname $q }
 
+# curl cheat.sh
+c() { q="$1" ; curl cheat.sh/$q }
+
 # ping
 ping() {
 	if [ $# -eq 0 ]
