@@ -7,6 +7,9 @@ ttrss-login     "markus"
 ttrss-flag-star    "s"
 ttrss-flag-publish "p"
 
+# list only unread feeds
+show-read-feeds no
+
 # refresh
 auto-reload "yes"
 reload-time "30"
