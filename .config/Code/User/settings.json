@@ -3,5 +3,6 @@
     "telemetry.enableCrashReporter": false,
     "workbench.statusBar.feedback.visible": false,
     "window.titleBarStyle": "custom",
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "update.showReleaseNotes": false
 }
