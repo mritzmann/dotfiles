@@ -30,4 +30,5 @@ class base {
   include '::redshift'
   include '::newsbeuter'
   include '::mscode'
+  include '::aptdater'
 }
