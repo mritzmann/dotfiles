@@ -21,4 +21,5 @@ class base {
 
   include '::zsh'
   include '::vim'
+  include '::redshift'
 }
