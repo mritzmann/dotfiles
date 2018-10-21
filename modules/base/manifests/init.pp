@@ -29,4 +29,5 @@ class base {
   include '::vim'
   include '::redshift'
   include '::newsbeuter'
+  include '::mscode'
 }
