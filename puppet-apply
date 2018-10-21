@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+DOTFILES="/home/markus/git/dotfiles"
+USERNAME="markus"
+
+export FACTER_myuser=${USERNAME}
+/usr/bin/puppet apply ${DOTFILES}/manifests/site.pp --modulepath ${DOTFILES}/modules
