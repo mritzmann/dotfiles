@@ -4,10 +4,6 @@ class redshift {
     'redshift-gtk': ensure => installed;
   }
 
-  file { "/home/${::myuser}/.config":
-    ensure  => 'directory',
-  }
-
   file { "/home/${::myuser}/.config/redshift.conf":
     ensure  => 'file',
     content => template('redshift/redshift.conf'),

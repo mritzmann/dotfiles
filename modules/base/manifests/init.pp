@@ -19,7 +19,14 @@ class base {
     'sipcalc':       ensure => installed;
   }
 
+  file { "/home/${::myuser}/.config":
+    ensure  => 'directory',
+    owner   => "$::myuser",
+    group   => "$::myuser",
+  }
+
   include '::zsh'
   include '::vim'
   include '::redshift'
+  include '::newsbeuter'
 }
