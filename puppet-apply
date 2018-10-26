@@ -1,7 +1,12 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 DOTFILES="/home/markus/git/dotfiles"
 USERNAME="markus"
+
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit 1
+fi
 
 export FACTER_myuser=${USERNAME}
 /usr/bin/puppet apply ${DOTFILES}/manifests/site.pp --modulepath ${DOTFILES}/modules
