@@ -1,5 +1,7 @@
 # install default packages and include some modules
 class base {
+
+  # install useful packages
   package {
     'htop':          ensure => installed;
     'unzip':         ensure => installed;
@@ -17,6 +19,36 @@ class base {
     'nmap':          ensure => installed;
     'tig':           ensure => installed;
     'sipcalc':       ensure => installed;
+  }
+
+  # uninstall unwanted packages
+  package {
+    'gnome-orca':                  ensure => absent; # screen reader
+    'gnome-maps':                  ensure => absent;
+    'gnome-weather':               ensure => absent;
+    'cheese':                      ensure => absent; # webcam
+    'gnome-getting-started-docs':  ensure => absent;
+    'brasero':                     ensure => absent; # cd/dvd burner
+    'gnome-clocks':                ensure => absent;
+  }
+
+  # uninstall games
+  package {
+    'aisleriot':        ensure => absent;
+    'gnome-mines':      ensure => absent;
+    'gnome-mahjongg':   ensure => absent;
+    'gnome-sudoku':     ensure => absent;
+    'gnome-tetravex':   ensure => absent;
+    'gnome-nibbles':    ensure => absent;
+    'gnome-robots':     ensure => absent;
+    'iagno':            ensure => absent;
+    'lightsoff':        ensure => absent;
+    'swell-foop':       ensure => absent;
+    'tali':             ensure => absent;
+    'quadrapassel':     ensure => absent;
+    'gnome-taquin':     ensure => absent;
+    'hitori':           ensure => absent;
+    'gnome-klotski':    ensure => absent;
   }
 
   file { "/home/${::myuser}/.config":
