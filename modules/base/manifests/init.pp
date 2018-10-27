@@ -63,4 +63,5 @@ class base {
   include '::newsbeuter'
   include '::mscode'
   include '::aptdater'
+  include '::gnome'
 }
