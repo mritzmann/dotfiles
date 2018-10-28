@@ -64,4 +64,5 @@ class base {
   include '::mscode'
   include '::aptdater'
   include '::gnome'
+  include '::i3'
 }
