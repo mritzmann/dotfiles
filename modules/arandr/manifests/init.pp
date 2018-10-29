@@ -27,4 +27,13 @@ class arandr {
     group   => "$::myuser",
     mode    => "755",
   }
+
+  # Lenovo @ home winti
+  file { "/home/${::myuser}/.screenlayout/home.sh":
+    ensure  => 'file',
+    content => template('arandr/home.sh'),
+    owner   => "$::myuser",
+    group   => "$::myuser",
+    mode    => "755",
+  }
 }
