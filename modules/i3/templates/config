@@ -165,3 +165,6 @@ bindsym $mod+Shift+x exec i3lock -c 000000
 
 # background
 exec --no-startup-id xsetroot -solid "#1e1d1d"
+
+# network-manager
+exec --no-startup-id nm-applet
