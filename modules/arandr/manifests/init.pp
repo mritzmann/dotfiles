@@ -10,6 +10,15 @@ class arandr {
     group   => "$::myuser",
   }
 
+  # Dell default
+  file { "/home/${::myuser}/.screenlayout/dell.sh":
+    ensure  => 'file',
+    content => template('arandr/dell.sh'),
+    owner   => "$::myuser",
+    group   => "$::myuser",
+    mode    => "755",
+  }
+
   # Lenovo default
   file { "/home/${::myuser}/.screenlayout/lenovo.sh":
     ensure  => 'file',
