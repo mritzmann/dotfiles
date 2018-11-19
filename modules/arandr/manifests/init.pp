@@ -38,9 +38,18 @@ class arandr {
   }
 
   # Lenovo @ home winti
-  file { "/home/${::myuser}/.screenlayout/home.sh":
+  file { "/home/${::myuser}/.screenlayout/home_lenovo.sh":
     ensure  => 'file',
-    content => template('arandr/home.sh'),
+    content => template('arandr/home_lenovo.sh'),
+    owner   => "$::myuser",
+    group   => "$::myuser",
+    mode    => "755",
+  }
+
+  # Dell @ home winti
+  file { "/home/${::myuser}/.screenlayout/home_dell.sh":
+    ensure  => 'file',
+    content => template('arandr/home_dell.sh'),
     owner   => "$::myuser",
     group   => "$::myuser",
     mode    => "755",
