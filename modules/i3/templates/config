@@ -86,8 +86,7 @@ bindsym $mod+a focus parent
 
 set $workspace1 "1: Browser"
 set $workspace2 "2: Terminal"
-set $workspace3 "3: Misc"
-set $workspace4 "4: Email"
+set $workspace3 "3: Email"
 set $workspace10 "10: Daily"
 
 # switch to workspace
@@ -119,7 +118,7 @@ bindsym $mod+Shift+d move workspace to output right
 bindsym $mod+Shift+a move workspace to output left
 
 # assign applications
-assign [class="Thunderbird"] $workspace4
+assign [class="Thunderbird"] $workspace3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -159,6 +158,15 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# fn keys: volume
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
+
+# fn keys: brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # lock system
 bindsym $mod+Shift+x exec i3lock -c 000000
