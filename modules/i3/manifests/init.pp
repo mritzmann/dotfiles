@@ -36,4 +36,9 @@ class i3 {
     owner   => "$::myuser",
     group   => "$::myuser",
   }
+
+  # rofi: program launcher and windows switcher
+  package {
+    'rofi': ensure => installed;
+  }
 }
