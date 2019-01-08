@@ -19,6 +19,7 @@ class base {
     'nmap':          ensure => installed;
     'tig':           ensure => installed;
     'sipcalc':       ensure => installed;
+    'jq':            ensure => installed;
   }
 
   # uninstall unwanted packages
