@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+command -v puppet >/dev/null 2>&1 || apt install -y puppet
+
 DOTFILES="/home/markus/git/dotfiles"
 USERNAME="markus"
 
