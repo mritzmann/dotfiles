@@ -20,6 +20,7 @@ class base {
     'tig':           ensure => installed;
     'sipcalc':       ensure => installed;
     'jq':            ensure => installed;
+    'lnav':          ensure => installed;
   }
 
   # uninstall unwanted packages
