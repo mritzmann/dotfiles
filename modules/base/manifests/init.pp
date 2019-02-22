@@ -21,6 +21,7 @@ class base {
     'sipcalc':       ensure => installed;
     'jq':            ensure => installed;
     'lnav':          ensure => installed;
+    'pv':            ensure => installed;
   }
 
   # uninstall unwanted packages
