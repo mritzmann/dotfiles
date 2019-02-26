@@ -22,6 +22,7 @@ class base {
     'jq':            ensure => installed;
     'lnav':          ensure => installed;
     'pv':            ensure => installed;
+    'spfquery':      ensure => installed;
   }
 
   # uninstall unwanted packages
