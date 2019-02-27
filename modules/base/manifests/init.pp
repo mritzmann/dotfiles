@@ -61,6 +61,12 @@ class base {
     group   => "$::myuser",
   }
 
+  file { "/home/${::myuser}/bin":
+    ensure  => 'directory',
+    owner   => "$::myuser",
+    group   => "$::myuser",
+  }
+
   include '::zsh'
   include '::vim'
   include '::redshift'
@@ -69,4 +75,5 @@ class base {
   include '::aptdater'
   include '::i3'
   include '::arandr'
+  include '::hakuna'
 }

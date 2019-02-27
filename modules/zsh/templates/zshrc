@@ -16,6 +16,9 @@ source $ZSH/oh-my-zsh.sh
 # zsh-syntax-highlighting
 [[ -f ~/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source ~/git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || echo "[INFO] zsh-syntax-highlighting is not installed"
 
+# PATH
+export PATH=~/bin:$PATH
+
 # local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 

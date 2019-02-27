@@ -1,0 +1,48 @@
+#!/bin/bash
+
+if [ -z $HAKUNA_API ];
+	then echo "HAKUNA_API environment variable is not set" ; exit 1
+fi
+
+if [ -z $HAKUNA_HOST ];
+	then echo "HAKUNA_HOST environment variable is not set" ; exit 1
+fi
+
+Status() {
+
+	curl --silent -X "GET" "https://${HAKUNA_HOST}/api/v1/timer" \
+		-H "Accept-Version: v1" \
+		-H "X-Auth-Token: ${HAKUNA_API}" | jq
+
+}
+
+StartTimer() {
+
+	curl --silent -X "POST" "https://${HAKUNA_HOST}/api/v1/timer" \
+		-H "Accept-Version: v1" \
+		-H "X-Auth-Token: ${HAKUNA_API}" \
+		-H "Content-Type: application/json; charset=utf-8" \
+		-d '{
+			"task_id": "1"
+		}' | jq
+
+}
+
+StopTimer() {
+
+	curl --silent -X "PUT" "https://${HAKUNA_HOST}/api/v1/timer" \
+		-H "X-Auth-Token: ${HAKUNA_API}" | jq
+
+}
+
+case $@ in
+	status)
+		Status
+		;;
+	start)
+		StartTimer
+		;;
+	stop)
+		StopTimer
+		;;
+esac
