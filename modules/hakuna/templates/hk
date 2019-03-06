@@ -16,7 +16,7 @@ Status() {
 
 	TIMER_STATUS_DURATION=$(echo $TIMER_STATUS | jq --raw-output .duration)
 
-	echo "Duration: $TIMER_STATUS_DURATION"
+	echo -e "Duration: $TIMER_STATUS_DURATION"
 
 }
 
@@ -34,12 +34,21 @@ StartTimer() {
 
 StopTimer() {
 
-	curl --silent -X "PUT" "https://${HAKUNA_HOST}/api/v1/timer" \
-		-H "X-Auth-Token: ${HAKUNA_API}" | jq
+	TIMER_STATUS=$(curl --silent -X "PUT" "https://${HAKUNA_HOST}/api/v1/timer" \
+		-H "X-Auth-Token: ${HAKUNA_API}")
+
+	TIMER_STATUS_START_TIME=$(echo $TIMER_STATUS | jq --raw-output .start_time)
+	TIMER_STATUS_END_TIME=$(echo $TIMER_STATUS | jq --raw-output .end_time)
+	TIMER_STATUS_DURATION=$(echo $TIMER_STATUS | jq --raw-output .duration)
+
+	echo -e "Start Time: $TIMER_STATUS_START_TIME\nEnd Time: $TIMER_STATUS_END_TIME\nDuration: $TIMER_STATUS_DURATION"
 
 }
 
 case $1 in
+	"")
+		Status
+		;;
 	status)
 		Status
 		;;
