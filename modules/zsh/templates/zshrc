@@ -19,8 +19,8 @@ source $ZSH/oh-my-zsh.sh
 # PATH
 export PATH=~/bin:$PATH
 
-# local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+# local env
+source ~/.config/zsh/env.d/*
 
 # no beeping
 setopt no_BEEP

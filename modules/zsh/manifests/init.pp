@@ -10,4 +10,16 @@ class zsh {
     owner   => "$::myuser",
     group   => "$::myuser",
   }
+
+  file { "/home/${::myuser}/.config/zsh":
+    ensure  => 'directory',
+    owner   => "$::myuser",
+    group   => "$::myuser",
+  }
+
+  file { "/home/${::myuser}/.config/zsh/env.d":
+    ensure  => 'directory',
+    owner   => "$::myuser",
+    group   => "$::myuser",
+  }
 }
