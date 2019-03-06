@@ -10,9 +10,13 @@ fi
 
 Status() {
 
-	curl --silent -X "GET" "https://${HAKUNA_HOST}/api/v1/timer" \
+	TIMER_STATUS=$(curl --silent -X "GET" "https://${HAKUNA_HOST}/api/v1/timer" \
 		-H "Accept-Version: v1" \
-		-H "X-Auth-Token: ${HAKUNA_API}" | jq
+		-H "X-Auth-Token: ${HAKUNA_API}")
+
+	TIMER_STATUS_DURATION=$(echo $TIMER_STATUS | jq --raw-output .duration)
+
+	echo "Duration: $TIMER_STATUS_DURATION"
 
 }
 
@@ -35,7 +39,7 @@ StopTimer() {
 
 }
 
-case $@ in
+case $1 in
 	status)
 		Status
 		;;
