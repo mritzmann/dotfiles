@@ -22,13 +22,17 @@ Status() {
 
 StartTimer() {
 
-	curl --silent -X "POST" "https://${HAKUNA_HOST}/api/v1/timer" \
+	TIMER_STATUS=$(curl --silent -X "POST" "https://${HAKUNA_HOST}/api/v1/timer" \
 		-H "Accept-Version: v1" \
 		-H "X-Auth-Token: ${HAKUNA_API}" \
 		-H "Content-Type: application/json; charset=utf-8" \
 		-d '{
 			"task_id": "1"
-		}' | jq
+		}')
+
+	TIMER_STATUS_START_TIME=$(echo $TIMER_STATUS | jq --raw-output .start_time)
+
+	echo -e "Start Time: $TIMER_STATUS_START_TIME"
 
 }
 
