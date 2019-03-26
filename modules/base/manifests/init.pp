@@ -76,4 +76,5 @@ class base {
   include '::i3'
   include '::arandr'
   include '::hakuna'
+  include '::clawsmail'
 }
