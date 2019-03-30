@@ -23,6 +23,7 @@ class base {
     'lnav':          ensure => installed;
     'pv':            ensure => installed;
     'spfquery':      ensure => installed;
+    'atool':         ensure => installed;
   }
 
   # uninstall unwanted packages
