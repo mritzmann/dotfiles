@@ -3,27 +3,29 @@ class base {
 
   # install useful packages
   package {
-    'htop':          ensure => installed;
-    'unzip':         ensure => installed;
-    'tree':          ensure => installed;
-    'git':           ensure => installed;
-    'curl':          ensure => installed;
-    'wget':          ensure => installed;
-    'traceroute':    ensure => installed;
-    'dnsutils':      ensure => installed;
-    'vnstat':        ensure => installed;
-    'whois':         ensure => installed;
-    'openssl':       ensure => installed;
-    'pwgen':         ensure => installed;
-    'ncdu':          ensure => installed;
-    'nmap':          ensure => installed;
-    'tig':           ensure => installed;
-    'sipcalc':       ensure => installed;
-    'jq':            ensure => installed;
-    'lnav':          ensure => installed;
-    'pv':            ensure => installed;
-    'spfquery':      ensure => installed;
-    'atool':         ensure => installed;
+    'apt-transport-https': ensure => installed;
+    'htop':                ensure => installed;
+    'unzip':               ensure => installed;
+    'tree':                ensure => installed;
+    'git':                 ensure => installed;
+    'curl':                ensure => installed;
+    'wget':                ensure => installed;
+    'traceroute':          ensure => installed;
+    'dnsutils':            ensure => installed;
+    'vnstat':              ensure => installed;
+    'whois':               ensure => installed;
+    'openssl':             ensure => installed;
+    'pwgen':               ensure => installed;
+    'ncdu':                ensure => installed;
+    'nmap':                ensure => installed;
+    'tig':                 ensure => installed;
+    'sipcalc':             ensure => installed;
+    'jq':                  ensure => installed;
+    'lnav':                ensure => installed;
+    'pv':                  ensure => installed;
+    'spfquery':            ensure => installed;
+    'atool':               ensure => installed;
+    'gparted':             ensure => installed;
   }
 
   # uninstall unwanted packages
@@ -54,6 +56,9 @@ class base {
     'gnome-taquin':     ensure => absent;
     'hitori':           ensure => absent;
     'gnome-klotski':    ensure => absent;
+    'five-or-more':     ensure => absent;
+    'four-in-a-row':    ensure => absent;
+    'gnome-chess':      ensure => absent;
   }
 
   file { "/home/${::myuser}/.config":
