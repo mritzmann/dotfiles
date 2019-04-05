@@ -51,3 +51,6 @@ ping() {
 		=ping "$@"
 	fi
 }
+
+# loads my ssh key
+eval $(keychain --eval markus)
