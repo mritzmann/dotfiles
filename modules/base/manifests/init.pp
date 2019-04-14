@@ -78,7 +78,6 @@ class base {
   include '::redshift'
   include '::newsbeuter'
   include '::mscode'
-  include '::aptdater'
   include '::i3'
   include '::arandr'
   include '::hakuna'
