@@ -83,4 +83,5 @@ class base {
   include '::arandr'
   include '::hakuna'
   include '::clawsmail'
+  include '::ssh'
 }
