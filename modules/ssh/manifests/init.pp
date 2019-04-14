@@ -6,15 +6,15 @@ class ssh {
   }
 
   file { "/home/${::myuser}/.ssh":
-    ensure  => 'directory',
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    ensure => 'directory',
+    owner  => $::myuser,
+    group  => $::myuser,
   }
 
   file { "/home/${::myuser}/.ssh/config":
     ensure  => 'file',
     content => template('ssh/config'),
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    owner   => $::myuser,
+    group   => $::myuser,
   }
 }

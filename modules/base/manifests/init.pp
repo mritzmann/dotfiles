@@ -62,15 +62,15 @@ class base {
   }
 
   file { "/home/${::myuser}/.config":
-    ensure  => 'directory',
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    ensure => 'directory',
+    owner  => $::myuser,
+    group  => $::myuser,
   }
 
   file { "/home/${::myuser}/bin":
-    ensure  => 'directory',
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    ensure => 'directory',
+    owner  => $::myuser,
+    group  => $::myuser,
   }
 
   include '::zsh'

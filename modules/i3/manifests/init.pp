@@ -7,16 +7,16 @@ class i3 {
   }
 
   file { "/home/${::myuser}/.config/i3":
-    ensure  => 'directory',
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    ensure => 'directory',
+    owner  => $::myuser,
+    group  => $::myuser,
   }
 
   file { "/home/${::myuser}/.config/i3/config":
     ensure  => 'file',
     content => template('i3/i3.conf'),
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    owner   => $::myuser,
+    group   => $::myuser,
   }
 
   # i3blocks
@@ -25,16 +25,16 @@ class i3 {
   }
 
   file { "/home/${::myuser}/.config/i3blocks":
-    ensure  => 'directory',
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    ensure => 'directory',
+    owner  => $::myuser,
+    group  => $::myuser,
   }
 
   file { "/home/${::myuser}/.config/i3blocks/config":
     ensure  => 'file',
     content => template('i3/i3blocks.conf'),
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    owner   => $::myuser,
+    group   => $::myuser,
   }
 
   # rofi: program launcher and windows switcher

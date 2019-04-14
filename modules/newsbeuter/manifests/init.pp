@@ -5,15 +5,15 @@ class newsbeuter {
   }
 
   file { "/home/${::myuser}/.newsbeuter":
-    ensure  => 'directory',
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    ensure => 'directory',
+    owner  => $::myuser,
+    group  => $::myuser,
   }
 
   file { "/home/${::myuser}/.newsbeuter/config":
     ensure  => 'file',
     content => template('newsbeuter/config'),
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    owner   => $::myuser,
+    group   => $::myuser,
   }
 }

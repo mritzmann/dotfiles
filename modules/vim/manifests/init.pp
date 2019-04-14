@@ -7,7 +7,7 @@ class vim {
   file { "/home/${::myuser}/.vimrc":
     ensure  => 'file',
     content => template('vim/vimrc'),
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    owner   => $::myuser,
+    group   => $::myuser,
   }
 }

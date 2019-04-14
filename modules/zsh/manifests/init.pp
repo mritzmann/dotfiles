@@ -7,19 +7,19 @@ class zsh {
   file { "/home/${::myuser}/.zshrc":
     ensure  => 'file',
     content => template('zsh/zshrc'),
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    owner   => $::myuser,
+    group   => $::myuser,
   }
 
   file { "/home/${::myuser}/.config/zsh":
-    ensure  => 'directory',
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    ensure => 'directory',
+    owner  => $::myuser,
+    group  => $::myuser,
   }
 
   file { "/home/${::myuser}/.config/zsh/env.d":
-    ensure  => 'directory',
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    ensure => 'directory',
+    owner  => $::myuser,
+    group  => $::myuser,
   }
 }

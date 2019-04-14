@@ -7,7 +7,7 @@ class redshift {
   file { "/home/${::myuser}/.config/redshift.conf":
     ensure  => 'file',
     content => template('redshift/redshift.conf'),
-    owner   => "$::myuser",
-    group   => "$::myuser",
+    owner   => $::myuser,
+    group   => $::myuser,
   }
 }
