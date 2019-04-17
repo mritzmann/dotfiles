@@ -40,7 +40,7 @@ digx() { q=$(dig +short a "$1") ; dig +short -x $q }
 f() { q="*$1*" ; find -iname $q }
 
 # curl cheat.sh
-c() { q="$1" ; curl cheat.sh/$q }
+c() { q="$1" ; curl https://cheatsheet.mari02.ops.opsserver.ch/$q ; echo "" ; curl https://cheat.sh/$q }
 
 # ping
 ping() {
