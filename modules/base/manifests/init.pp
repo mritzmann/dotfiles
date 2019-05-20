@@ -76,7 +76,6 @@ class base {
   include '::zsh'
   include '::vim'
   include '::redshift'
-  include '::newsbeuter'
   include '::mscode'
   include '::i3'
   include '::arandr'
