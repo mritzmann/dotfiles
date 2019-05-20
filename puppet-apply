@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
+DOTFILES="/home/${SUDO_USER}/git/dotfiles"
 
-command -v puppet >/dev/null 2>&1 || apt install -y puppet
-
-DOTFILES="/home/markus/git/dotfiles"
-USERNAME="markus"
-
+# check permissions
 if [ "$EUID" -ne 0 ]
   then echo "Please run as root"
   exit 1
 fi
 
-export FACTER_myuser=${USERNAME}
+# install puppet
+command -v puppet >/dev/null 2>&1 || apt install -y puppet
+
+# execute puppet
+export FACTER_myuser=${SUDO_USER}
 /usr/bin/puppet apply ${DOTFILES}/manifests/site.pp --modulepath ${DOTFILES}/modules
