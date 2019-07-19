@@ -1,0 +1,11 @@
+stages:
+- test
+
+lint_puppet:
+  image: "ruby:latest"
+  stage: test
+  before_script:
+    - gem install puppet-lint
+  script:
+    - puppet-lint .
+
