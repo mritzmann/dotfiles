@@ -26,6 +26,7 @@ class base {
     'spfquery':            ensure => installed;
     'atool':               ensure => installed;
     'gparted':             ensure => installed;
+    'detox':               ensure => installed; # clean up filenames
   }
 
   # uninstall unwanted packages
