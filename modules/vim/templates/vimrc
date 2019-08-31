@@ -1,6 +1,8 @@
 syntax on
+set autoindent
+set hlsearch
+set incsearch
 
 " highlight the current column for yaml files
 autocmd BufNewFile,BufRead *.yml set cursorcolumn
 autocmd BufNewFile,BufRead *.yaml set cursorcolumn
-
