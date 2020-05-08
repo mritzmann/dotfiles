@@ -80,6 +80,5 @@ class base {
   include '::mscode'
   include '::i3'
   include '::hakuna'
-  include '::clawsmail'
   include '::ssh'
 }
