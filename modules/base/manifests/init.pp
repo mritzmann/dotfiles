@@ -24,7 +24,7 @@ class base {
     'lnav':                ensure => installed;
     'pv':                  ensure => installed;
     'spfquery':            ensure => installed;
-    'atool':               ensure => installed;
+    'atool':               ensure => installed; # unpacks everything
     'gparted':             ensure => installed;
     'detox':               ensure => installed; # clean up filenames
   }
