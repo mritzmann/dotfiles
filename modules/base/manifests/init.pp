@@ -79,7 +79,6 @@ class base {
   include '::redshift'
   include '::mscode'
   include '::i3'
-  include '::arandr'
   include '::hakuna'
   include '::clawsmail'
   include '::ssh'
