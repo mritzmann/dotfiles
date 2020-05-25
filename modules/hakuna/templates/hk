@@ -16,8 +16,22 @@ StatusTimer() {
 
 	TIMER_STATUS_DURATION=$(echo $TIMER_STATUS | jq --raw-output .duration)
 
-	echo -e "Running Timer: $TIMER_STATUS_DURATION"
+	echo -e "Running Timer:\t\t$TIMER_STATUS_DURATION"
 
+}
+
+StatusDay() {
+	DATE_TODAY=$(date +%Y-%m-%d)
+
+
+	TIMER_GET_ALL_TIME_ENTRIES=$(curl --silent -X "GET" "https://${HAKUNA_HOST}/api/v1/time_entries?start_date=${DATE_TODAY}&end_date=${DATE_TODAY}" \
+		-H "Accept-Version: v1" \
+		-H "X-Auth-Token: ${HAKUNA_API}")
+
+	TIMER_GET_ALL_TIME_ENTRIES_SECONDS=$(echo $TIMER_GET_ALL_TIME_ENTRIES | jq '.[].duration_in_seconds' | awk 'BEGIN { sum=0 } { sum+=$1 } END {print sum }')
+	CONVERT_TO_HOURS=$(printf '%dh:%dm:%ds\n' $(($TIMER_GET_ALL_TIME_ENTRIES_SECONDS/3600)) $(($TIMER_GET_ALL_TIME_ENTRIES_SECONDS%3600/60)) $(($TIMER_GET_ALL_TIME_ENTRIES_SECONDS%60)))
+
+	echo -e "Summary Today:\t\t$CONVERT_TO_HOURS"
 }
 
 StatusWeek() {
@@ -32,7 +46,7 @@ StatusWeek() {
 	TIMER_GET_ALL_TIME_ENTRIES_SECONDS=$(echo $TIMER_GET_ALL_TIME_ENTRIES | jq '.[].duration_in_seconds' | awk 'BEGIN { sum=0 } { sum+=$1 } END {print sum }')
 	CONVERT_TO_HOURS=$(printf '%dh:%dm:%ds\n' $(($TIMER_GET_ALL_TIME_ENTRIES_SECONDS/3600)) $(($TIMER_GET_ALL_TIME_ENTRIES_SECONDS%3600/60)) $(($TIMER_GET_ALL_TIME_ENTRIES_SECONDS%60)))
 
-	echo -e "Week: $CONVERT_TO_HOURS"
+	echo -e "Summary Week:\t\t$CONVERT_TO_HOURS"
 
 }
 
@@ -67,10 +81,13 @@ StopTimer() {
 
 case $1 in
 	"")
-		Status
+		StatusTimer
+		StatusDay
+		StatusWeek
 		;;
 	status)
 		StatusTimer
+		StatusDay
 		StatusWeek
 		;;
 	start)
