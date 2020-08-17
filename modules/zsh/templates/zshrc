@@ -30,6 +30,9 @@ alias myip="myip4 && myip6"
 alias myip4='IP=$(dig +short -4 myip.opendns.com a @resolver1.opendns.com 2> /dev/null) && echo "IPv4: $IP" || echo "IPv4: down"'
 alias myip6='IP=$(dig +short -6 myip.opendns.com aaaa @resolver1.opendns.com 2> /dev/null) && echo "IPv6: $IP" || echo "IPv6: down"'
 
+# for the lulz
+alias gca='git add -A; git commit -a -m "`curl -s http://whatthecommit.com/index.txt`"'
+
 # bat
 type bat > /dev/null && alias cat=bat || echo "[INFO] https://github.com/sharkdp/bat is not installed"
 
