@@ -55,5 +55,11 @@ ping() {
 	fi
 }
 
+# man page
+man () {
+  section="$(test -z $2 && echo 0 || echo $1)" page="${2:-$1}"
+  /usr/bin/man <(curl -s "https://man-api.ch/v1/buster/${section}/${page}.gz")
+}
+
 # loads my ssh key
 eval $(keychain --eval markus)
